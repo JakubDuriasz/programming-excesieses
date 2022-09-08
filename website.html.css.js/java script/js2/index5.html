@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <canvas id = "myChart" width = "200" height="50"></canvas>
+    <script>
+        const ctx = 'myChart';
+
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow?', 'Black'],
+                datasets: [
+                    {
+                        label: 'kolory',
+                        data: [12, 19, 3, 6],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 236, 0.2)',
+                            'rgba(55, 43, 155, 0.2)',
+                            'rgba(55, 43, 55, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(54,162,236, 0.2)',
+                            'rgba(54,162,236, 0.2)',
+                            'rgba(54,162,236, 0.2)',
+                            'rgba(55, 43, 55, 0.2)'
+                        ],
+                        borderWidth: 1
+                    }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Kolory czy coś"
+                    }
+                }
+            },
+            responsive:false
+        });
+    </script>
+    
+</body>
+</html>

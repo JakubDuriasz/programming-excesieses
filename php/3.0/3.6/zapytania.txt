@@ -1,0 +1,25 @@
+AD 5
+a)
+SELECT * FROM uczen ORDER BY nazwisko ASC;
+
+b)
+SELECT * FROM uczen WHERE nazwisko LIKE "N%" AND imie LIKE "%A";
+
+AD 6
+a)
+SELECT id_ucznia as liczba_uczniów FROM uczen ORDER BY id_ucznia DESC LIMIT 1;
+
+b)
+SELECT avg(ocena) as ogólna_średnia FROM oceny;
+
+c)
+SELECT uczen.imie, uczen.nazwisko, przedmiot.nazwa_przedmiotu, oceny.ocena from oceny, przedmiot, uczen 
+where uczen.id_ucznia = oceny.id_ucznia AND przedmiot.id_przedmiotu = oceny.id_przedmiotu 
+AND przedmiot.nazwa_przedmiotu = 'chemia' 
+AND oceny.ocena = (SELECT MIN(oceny.ocena) FROM oceny, przedmiot 
+WHERE oceny.id_przedmiotu = przedmiot.id_przedmiotu AND przedmiot.nazwa_przedmiotu = 'chemia');
+
+d)
+SELECT concat(imie, " ",nazwisko) AS "Imię i nazwisko", nazwa_przedmiotu as "przedmiot", ocena 
+FROM uczen, oceny, przedmiot 
+WHERE oceny.id_ucznia = uczen.id_ucznia limit 1;

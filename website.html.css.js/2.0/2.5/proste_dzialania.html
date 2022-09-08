@@ -1,0 +1,56 @@
+<!--Autor: Jakub Duriasz-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proste działania</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="baner.jpg" alt="baner"></a>
+        </header>
+  
+        <nav>
+        <a href="proste_dzialania.html">proste działania</a>
+        <a href="potęgowanie">potęgowanie</a>
+        </nav>
+  
+        <main>
+            <h1>PROSTE DZIAŁANIA</h1>
+            <p><i>Podaj pierwszą liczbę:</i>
+            <input type="number" id="i1"/></p>
+                <p><i>Podaj drugą liczbę:</i>
+            <input type="number" id="i2"/></p>
+            <p>
+                <button onclick="f(1)">DODAWANIE</button>
+                <button onclick="f(2)">ODEJMOWANIE</button>
+                <button onclick="f(3)">MNOŻENIE</button>
+                <button onclick="f(4)">DZIELENIE</button>
+            </p>
+            <output id="o1"></output>
+        </main>
+  
+  <script>
+function f(x) {
+var a=parseInt(i1.value)
+var b=parseInt(i2.value)
+var w
+ if (isNaN(a) || isNaN(b)) {
+ w = "Proszę uzupełnić obie liczby"
+ }
+ else if(x==4 && b==0) {
+ w = "Nie wolno dzielić przez zero"
+ }
+ else { 
+  if (x==1) w=a+b
+  else if(x==2) w=a-b
+  else if(x==3) w=a*b
+  else if(x==4 && b!=0) w=a/b
+  w="Wynik działania wynosi: "+w
+ }
+o1.value=w
+}   
+  </script>
+ </body>
+</html>

@@ -1,0 +1,119 @@
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 20px;
+}
+
+.koszyk
+{
+	margin-left: auto;
+	line-height: 30px;
+	margin-right: auto;
+	width: 1001px;
+	height: 600px;
+	border: 1px solid black;
+}
+
+.logo
+{
+	background-color: lightblue;
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+.lewy
+{
+	float: left;
+	width: 500px; /* background-color: #707070; */
+	border-right: 1px solid black;
+	
+}
+
+.prawy
+{
+	float: left;
+	height: 470px;
+	width: 500px;
+}
+
+.logo1
+{
+	background-color: #2199de;
+	color: #ffffff;
+	text-align: center;
+	border-bottom: 1px solid black;
+	height: 30px;
+}
+
+.l1
+{
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.l1:hover
+{
+	color: #6745FF;
+	font-size: 16px;
+}
+
+.x
+{
+	font-size: 18px;
+	text-align: justify;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.pl
+{
+	float: left;
+	width: 250px;
+	border-right: 1px solid black;
+	text-align: center;
+	height: 253px;
+}
+
+.pr
+{
+	float: left;
+	width: 249px;
+	text-align: center;
+}
+
+.pl1
+{
+	float: left;
+	width: 250px;
+	border-right: 1px solid black;
+	text-align: center;
+	height: 175px;
+}
+
+.pr1
+{
+	float: left;
+	width: 249px;
+	text-align: center;
+}
+
+.h3
+{
+	margin: 15px;
+}
+
+.foto
+{
+	float: left;
+}
+
+.y
+{
+	float: right;
+	font-size: 15px;
+	text-align: justify;
+	margin-left: 30px;
+	margin-right: 30px;
+}

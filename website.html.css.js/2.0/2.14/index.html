@@ -1,0 +1,292 @@
+<!doctype html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Zdarzenia w JavaScript" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta author = "Jakub Duriasz">
+
+    <title>Zdarzenia w JavaScript</title>
+</head>
+
+<body>
+    <article id="strona">
+        <div class="fb-like" data-href="http://obliczeniowo.com.pl/653" data-layout="button_count" data-action="like"
+            data-size="large" data-show-faces="false" data-share="true"></div>
+
+        <ul>
+            <li><strong class="HTML">onchange</strong> - zdarzenie wywoływane, gdy dany element <strong>HTML</strong>
+                uległ zmianie;</li>
+            <li><strong class="HTML">onclick</strong> - zdarzenie wywoływane, gdy dany element strony zostanie
+                kliknięty;</li>
+            <li><strong class="HTML">onmouseover</strong> - zdarzenie wywoływane, gdy kursor myszy najedzie na element z
+                nim związany;</li>
+            <li><strong class="HTML">onmouseout</strong> - zdarzenie wywoływane, gdy kursor myszy opuści dany element z
+                nim związany;</li>
+            <li><strong class="HTML">onkeydown</strong> - zdarzenie wywoływane, gdy użytkownik wciśnie jakiś przycisk
+                klawiatury;</li>
+            <li><strong class="HTML">onkeypress</strong> - zdarzenie wywoływane, gdy użytkownik wciśnie dowolny przycisk
+                klawiatury oprócz: <b>ALT</b>, <b>CTRL</b>, <b>SHIFT</b>, <b>ESC</b>;</li>
+            <li><strong class="HTML">onkeyup</strong> - zdarzenie wywoływane, gdy użytkownik zwolni przycisk na
+                klawiaturze;</li>
+            <li><strong class="HTML">onmousemove</strong> - zdarzenie wywoływane, gdy użytkownik przemieszcza kursor
+                myszy nad danym elementem;</li>
+            <li><strong class="HTML">onload</strong> - zdarzenie wywoływane, gdy przeglądarka załaduje całą stronę.</li>
+        </ul>
+
+        <p>Przykład:</p>
+
+        <div class="CodeClass">
+            <header><a name="Listing1">Listing 1</a></header>
+            <ol class="code_list" id="Listing1">
+                <li>var element <span style="color: red">=</span> document<span style='color: red'>.</span><span
+                        style="color: purple">getElementById</span><span style='color: red'>(</span><b><i><span
+                                style="color: fuchsia">"example1"</span></i></b><span style='color: red'>)</span><span
+                        style="color: red">;</span>
+                </li>
+                <li>element<span style='color: red'>.</span><span style="color: purple">addEventListener</span><span
+                        style='color: red'>(</span><b><i><span style="color: fuchsia">"click"</span></i></b><span
+                        style='color: red'>,</span> <span style="color: purple"><span
+                            style='color:red'>function</span></span><span style='color: red'>(</span><span
+                        style='color: red'>)</span><span style='color: red'>{</span>
+                </li>
+                <li> <span style="color: purple"><span style='color:red'>if</span></span><span
+                        style='color: red'>(</span>this<span style='color: red'>.</span>style<span
+                        style='color: red'>.</span>backgroundColor <span style="color: red">=</span><span
+                        style="color: red">=</span> <b><i><span style="color: fuchsia">"red"</span></i></b><span
+                        style='color: red'>)</span><span style='color: red'>{</span>
+                </li>
+                <li> this<span style='color: red'>.</span>style<span style='color: red'>.</span>backgroundColor <span
+                        style="color: red">=</span> <b><i><span style="color: fuchsia">"green"</span></i></b><span
+                        style="color: red">;</span>
+                </li>
+                <li> <span style='color: red'>}</span><span style='color:red'>else</span><span
+                        style='color: red'>{</span>
+                </li>
+                <li> this<span style='color: red'>.</span>style<span style='color: red'>.</span>backgroundColor <span
+                        style="color: red">=</span> <b><i><span style="color: fuchsia">"red"</span></i></b><span
+                        style="color: red">;</span>
+                </li>
+                <li> <span style='color: red'>}</span>
+                </li>
+                <li><span style='color: red'>}</span><span style='color: red'>)</span><span style="color: red">;</span>
+                </li>
+            </ol>
+        </div>
+
+        <p>Wynik działania powyższego kodu:</p>
+
+        <div id="example1" style="width: 100px; height: 30px; background-color: green"></div>
+
+        <script>var element = document.getElementById("example1");
+            element.addEventListener("click", function () {
+                if (this.style.backgroundColor == "red") {
+                    this.style.backgroundColor = "green";
+                } else {
+                    this.style.backgroundColor = "red";
+                }
+            });</script>
+
+        <p>Nieco ciekawszym zdarzeniem jest <strong class="HTML">onkeydown</strong>, ponieważ funkcja, którą można
+            podpiąć pod to zdarzenie często będzie przyjmowała dodatkowy argument. Argument ten będzie obiektem
+            zawierającym przydatne informacje na temat tego, jaki przycisk został wciśnięty przez użytkownika. Ważne
+            jest, że aby to zdarzenie zostało wywołane konieczne jest uzyskanie przez dany element strony <b>fokusa</b>,
+            czyli obsługi klawiatury. Oto prosty przykład:</p>
+
+        <div class="CodeClass">
+            <header><a name="Listing2">Listing 2</a></header>
+            <ol class="code_list" id="Listing2">
+                <li>var element <span style="color: red">=</span> document<span style='color: red'>.</span><span
+                        style="color: purple">getElementById</span><span style='color: red'>(</span><b><i><span
+                                style="color: fuchsia">"example2"</span></i></b><span style='color: red'>)</span><span
+                        style="color: red">;</span>
+                </li>
+                <li>element<span style='color: red'>.</span><span style="color: purple">addEventListener</span><span
+                        style='color: red'>(</span><b><i><span style="color: fuchsia">"keydown"</span></i></b><span
+                        style='color: red'>,</span> <span style="color: purple"><span
+                            style='color:red'>function</span></span><span style='color: red'>(</span>event<span
+                        style='color: red'>)</span><span style='color: red'>{</span>
+                </li>
+                <li> <span style="color: purple">alert</span><span style='color: red'>(</span>event<span
+                        style='color: red'>.</span>keyCode<span style='color: red'>)</span><span
+                        style="color: red">;</span>
+                </li>
+                <li><span style='color: red'>}</span><span style='color: red'>)</span><span style="color: red">;</span>
+                </li>
+            </ol>
+        </div>
+
+        <p>Wynik działania na elemencie typu <strong class="HTML">&lt;input&gt;</strong>:</p>
+
+        <input type="text" id="example2"></input>
+
+        <script>var element = document.getElementById("example2");
+            element.addEventListener("keydown", function (event) {
+                alert(event.keyCode);
+            });</script>
+
+        <p>Równie ciekawym zdarzeniem jest <strong class="HTML">onmousemove</strong>, gdzie z kolei można pozyskać
+            położenie kursora myszy nad danym elementem, oto przykładowy kod:</p>
+
+        <div class="CodeClass">
+            <header><a name="Listing3">Listing 3</a></header>
+            <ol class="code_list" id="Listing3">
+                <li>var element <span style="color: red">=</span> document<span style='color: red'>.</span><span
+                        style="color: purple">getElementById</span><span style='color: red'>(</span><b><i><span
+                                style="color: fuchsia">"example3"</span></i></b><span style='color: red'>)</span><span
+                        style="color: red">;</span>
+                </li>
+                <li>element<span style='color: red'>.</span><span style="color: purple">addEventListener</span><span
+                        style='color: red'>(</span><b><i><span style="color: fuchsia">"mousemove"</span></i></b><span
+                        style='color: red'>,</span> <span style="color: purple"><span
+                            style='color:red'>function</span></span><span style='color: red'>(</span>event<span
+                        style='color: red'>)</span><span style='color: red'>{</span>
+                </li>
+                <li> var x <span style="color: red">=</span> event<span style='color: red'>.</span>pageX <span
+                        style="color: red">-</span> this<span style='color: red'>.</span>offsetLeft<span
+                        style="color: red">;</span>
+                </li>
+                <li> var y <span style="color: red">=</span> event<span style='color: red'>.</span>pageY <span
+                        style="color: red">-</span> this<span style='color: red'>.</span>offsetTop<span
+                        style="color: red">;</span>
+                </li>
+                <li> this<span style='color: red'>.</span>innerHTML <span style="color: red">=</span> <b><i><span
+                                style="color: fuchsia">"X = "</span></i></b> <span style="color: red">+</span> x <span
+                        style="color: red">+</span> <b><i><span style="color: fuchsia">" Y = "</span></i></b> <span
+                        style="color: red">+</span> y<span style="color: red">;</span>
+                </li>
+                <li><span style='color: red'>}</span><span style='color: red'>)</span><span style="color: red">;</span>
+                </li>
+            </ol>
+        </div>
+
+        <p>Wynik działania powyższego kodu:</p>
+
+        <div id="example3" style="width: 200px; height: 50px; background: green; color: red"></div>
+
+        <script>var element = document.getElementById("example3");
+            element.addEventListener("mousemove", function (event) {
+                var x = event.pageX - this.offsetLeft;
+                var y = event.pageY - this.offsetTop;
+                this.innerHTML = "X = " + x + " Y = " + y;
+            });</script>
+
+        </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var NavY = $('#navigation_up').offset().top;
+                var upMenuPos = document.getElementById("menu_pos_up");
+
+                var stickyNav = function () {
+                    var ScrollY = $(window).scrollTop();
+
+                    if (ScrollY) {
+                        upMenuPos.style.display = "table-cell";
+                    } else {
+                        upMenuPos.style.display = "none";
+                    }
+
+                    if (ScrollY > NavY) {
+                        $('#navigation_up').addClass('sticky');
+                        if ($("#spis").css("display") != "none") {
+                            $('#navigation_up').css("width", ($(window).width() - $("#spis").width()) + "px");
+                        }
+                        $('.calendar').css("top", $('#navigation_up').height());
+                    } else {
+                        $('#navigation_up').removeClass('sticky');
+                        $('#navigation_up').css("width", $(window).width() + "px");
+                        $('.calendar').css("top", ($('#navigation_up').innerHeight() + $('#navigation_up').offset()["top"]) + "px");
+                        //alert($('#navigation_up').height() + $('#navigation_up').offset()["top"]);
+                    }
+                };
+
+                function setSvg() {
+                    var svg = $("#strona svg");
+                    var width = $("#strona").outerWidth() - 10;
+                    for (var i = 0; i < svg.length; i++) {
+                        var svg_width = svg[i].width["baseVal"]["value"];
+                        var svg_height = svg[i].height["baseVal"]["value"];
+                        var r = $(svg[i]).children("g.responsive");
+                        if (svg_width > width) {
+                            r.css("transform", "scale(" + width / svg_width + ")");
+                            $(svg[i]).css("height", svg_height * width / svg_width);
+                        } else {
+                            r.css("transform", "scale(1)");
+                            $(svg[i]).css("height", svg_height);
+                        }
+                    }
+                }
+
+                var codeBlock = $(".CodeClass");
+                if ($(".CodeClass header button").length == 0) {
+                    for (var i = 0; i < codeBlock.length; i++) {
+                        var buttonMinimalize = document.createElement("BUTTON");
+                        buttonMinimalize.appendChild(document.createTextNode("Zwiń"));
+                        buttonMinimalize.value = codeBlock[i].getElementsByTagName("a")[0].name;
+
+                        buttonMinimalize.onclick = function () {
+                            var code = document.getElementById(this.value);
+                            if (code.style.display === "none") {
+                                code.style.display = "block";
+                                $(this).text("Zwiń");
+                            } else {
+                                code.style.display = "none";
+                                $(this).text("Rozwiń");
+                            }
+                        }
+                        codeBlock[i].getElementsByTagName("header")[0].appendChild(buttonMinimalize);
+
+                        var button = document.createElement("BUTTON");
+                        button.appendChild(document.createTextNode("Kopiuj"));
+                        button.value = codeBlock[i].getElementsByTagName("a")[0].name;
+
+                        button.onclick = function () {
+                            var copy = $(document.getElementById(this.value)).text();
+                            copy = copy.replace(/    /g, "\t");
+                            var textarea = document.createElement("textarea");
+                            textarea.textContent = copy;
+                            textarea.style.position = "fixed";
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            try {
+                                document.execCommand("copy");
+                            } catch (ex) {
+                                console.warn("Copy to clipboard failed.", ex);
+                            } finally {
+                                document.body.removeChild(textarea);
+                            }
+                        }
+                        codeBlock[i].getElementsByTagName("header")[0].appendChild(button);
+                    }
+                }
+
+                setSvg();
+
+                stickyNav();
+
+                $(window).scroll(function () {
+                    stickyNav();
+                });
+
+                $(window).resize(function () {
+                    if ($('#navigation_up').css("position") == "fixed") {
+                        if ($("#spis").css("display") != "none") {
+                            $('#navigation_up').css("width", ($(window).width() - $("#spis").width()) + "px");
+                        } else {
+                            $('#navigation_up').css("width", $(window).width() + "px");
+                        }
+                    } else {
+                        $('#navigation_up').css("width", $(window).width() + "px");
+                    }
+
+                    setSvg();
+                })
+            });
+        </script>
+</body>
+
+</html>

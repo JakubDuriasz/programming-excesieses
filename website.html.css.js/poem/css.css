@@ -1,0 +1,30 @@
+p title{
+font-size: 50px;
+font-weight: bold;
+text-align: center;
+color: #f73c2f;
+}
+
+p autor{
+font-size: 35px;
+text-align: center;
+color: #ed37f0;
+}
+
+p tresc{
+font-size: 25px;
+}
+
+body {
+  background-color: #17d4c7;
+  font-family: 'Dancing Script', cursive;
+  background-size: cover;
+    background-image: url('https://images.rapgenius.com/79035115dbc70ea5ca901e555747576e.663x364x1.jpg');
+
+}
+
+div {   
+  border: 5px solid gray;
+  padding: 8px;
+  text-align: center;
+}

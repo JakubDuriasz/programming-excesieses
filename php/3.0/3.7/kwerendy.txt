@@ -1,0 +1,7 @@
+1. SELECT imie, nazwisko, opis, zdjecie FROM osoby WHERE hobby_id in (1, 2, 6)
+
+2. SELECT osoby.id, osoby.nazwisko, hobby.nazwa FROM osoby INNER JOIN hobby ON osoby.Hobby_id = hobby.id WHERE osoby.rok_urodzenia > 2000
+
+3. SELECT id, zdjecie FROM osoby WHERE imie='Monika' LIMIT 5
+
+4. CREATE TABLE cw10.wpisy ( id INT NOT NULL AUTO_INCREMENT , wpis TEXT NULL , uzytkownik_id INT NOT NULL , PRIMARY KEY (id))

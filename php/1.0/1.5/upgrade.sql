@@ -1,0 +1,3 @@
+ALTER TABLE students RENAME TO studenci;
+
+ALTER TABLE `studenci` CHANGE `student_id` `id_studenta` INT(7) NOT NULL AUTO_INCREMENT, CHANGE `family_name` `nazwisko` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL, CHANGE `name` `imie` VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL, CHANGE `country` `kraj` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'Polska';

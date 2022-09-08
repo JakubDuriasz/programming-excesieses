@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<title>Galeria zdjęć</title>
+
+	<script type="text/javascript">
+		function over(id, img) 
+		{			
+			document.getElementById(id).src = img;			
+		}
+
+		function clicked(id, img)
+		{			
+			document.getElementById('set').src = img;
+			out(id, img);			
+		}
+
+		function out(id, img)
+		{
+			document.getElementById(id).src = img;
+		}
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1>Zdjęcia kotów</h1>
+	</header>
+	<nav>
+		<h2>Kategorie</h2>
+		<ul>
+			<a href="psy.html"><li>Psy</li></a>
+			<a href="koty.html"><li>Koty</li></a>
+			<li>Gryzonie</li>
+			<li>Jaszczurki</li>
+			<li>Inne zdjęcia</li>
+		</ul>
+		<a href="index.html"><h4>Powrót do strony głownej</h4></a>
+	</nav>	
+	<main id="pg">
+		<h1>Wybierz zdjęcie</h1>
+		<img id="1" src="kot1.jpg" alt="kot1" onclick="clicked('1', 'kot1.jpg')" onmouseover="over('1', 'kot1-szary.jpg')" onmouseout="out('1', 'kot1.jpg')">
+	</main>
+	<main id="pd">
+		<p><img id="set" src="kot1.jpg" alt="kot-duzy" class="pd"></p>
+	</main>	
+	<footer>Galerię zdjęć opracował 00000000000</footer>	
+</body>
+</html>

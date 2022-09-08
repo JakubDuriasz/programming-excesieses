@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#pudelko {
+    margin: auto;
+    width: 90%;
+    height: 800px;
+
+}
+
+#logo {
+    height: 15%;
+    background-color: rgb(40, 141, 53);
+}
+
+#menulewe {
+    width: 20%;
+    height: 80%;
+    float: left;
+    background-color: rgb(28, 197, 50);
+}
+
+#tresc {
+    width: 60%;
+    height: 80%;
+    float: left; 
+    background-color: rgb(67, 204, 67);
+    color: white;
+}
+
+#menuprawe {
+    width: 20%;
+    height: 80%;
+    float: right;
+    background-color: rgb(28, 197, 50);
+}
+
+#stopka {
+    background-color: rgb(40, 141, 53);
+    clear: both;
+    color: white;
+}

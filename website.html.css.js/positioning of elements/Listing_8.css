@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#obrazek_css{
+    border: solid black;
+    position: relative;
+    right: 20px;
+    top: 20px;
+}

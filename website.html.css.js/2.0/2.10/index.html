@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>List do Świętego mikołaja</title>
+    <link rel="stylesheet" href="style.css">
+    <meta author="Jakub Duriasz">
+</head>
+
+<body>
+    <audio loop="loop" autoplay="autoplay">  
+        <source src="muzyka.3gp" />  
+    </audio> 
+
+    <header>
+        Napisz list do Świętego Mikołaja
+    </header>
+    <form id="formularz" action="mailto:info@santaclausoffice.com" method="get">
+        Imię i nazwisko:<br>
+        <input type="text" id="text" minlength="3" required><br><br>
+        Twój wiek:<br>
+        <input type="number" id="text" minlength="1" required><br><br>
+        Jaki chciałbyś dostać prezent:<br>
+        <input type="text" id="text" minlength="5" required><br><br>
+        <input type="submit" value="Wyślij" id="przycisk">
+    </form>
+    <footer>
+        <a href="https://santaclausoffice.com/" target="outblank"> Strona Świętego Mikołaja</a><br>
+        <a>Jakub Duriasz 2Td 1/2</a>
+        <div id="data">data</div>
+        <video width="400" height="300" controls>
+            <source src="filmik.mp4" type="video/mp4"></video>
+    </footer>
+    <script>
+        setInterval(data, 1000)
+        function data() {
+
+            let result = document.getElementById("data");
+
+            let dzisiaj = new Date();
+            let sekundy = dzisiaj.getSeconds();
+            let minuty = dzisiaj.getMinutes();
+            let godziny = dzisiaj.getHours();
+            let dni = dzisiaj.getDay();
+            let miesiace = dzisiaj.getMonth();
+            let rok = dzisiaj.getFullYear();
+
+            let stringResult = dni + "/" + miesiace + "/" + rok + " " + godziny + ":" + minuty + ":" + sekundy;
+            result.innerHTML = stringResult;
+        }
+    </script>
+
+</body>
+
+</html>

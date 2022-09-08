@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Wykres w Chart.js</title>
+    <script src="node_modules/chart.js/dist/chart.min.js"></script>
+</head>
+<body>
+    <canvas id="barChart" width="1250" height="650"></canvas>
+    <script>
+        const barctx = document.getElementById('barChart');
+        const barChart = new Chart (barctx, {
+            type: 'bar',
+            data:{
+                labels: ['Strzelce Krajenskie','Gorzów Wielkopolski','Międzyrzecz','Sulęciń','Słubice','Świebodzin','Krosno Odrzańskie','Zielona Góra','Żary','Żagań','Nowa Sól','Wschowa'],
+                datasets: [{
+                    label: 'Temperatura',
+                    data: [7,8,7,7,7,7,7,6,7,7,7,6],
+                    backgroundColor: [
+                        '#4287f5',
+                        '#3bcc78',
+                        '#8f49b8',
+                        '#ed962b',
+                        '#db3a2c'
+
+                    ]
+                }]
+            },
+            options:{
+                scales:{
+                    y: {
+                        beginAtzero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Temperatura w stolicach powiatów w Lubuskim'
+                    }
+                },
+                responsive: false
+            }
+        })
+    </script>
+</body>
+</html>

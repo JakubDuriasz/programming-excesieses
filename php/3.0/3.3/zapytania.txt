@@ -1,0 +1,21 @@
+1.
+create database cw02;
+use cw02;
+source C:\Users\dell\Desktop\nauka04.sql;
+
+2.
+select * from duzatabelka where cena>32765;
+
+3.
+select * from duzatabelka where cena>20000 and cena<20010 order by kod;
+
+4.
+select * from duzatabelka where cena>20000 and cena<20010 order by kod 
+limit 19,10;
+
+5.
+select avg(cena) from duzatabelka;
+
+6.
+select * from duzatabelka where cena>(select avg(cena) from duzatabelka) 
+and match(opis) against('receitei');

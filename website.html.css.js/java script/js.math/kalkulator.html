@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator</title>
+    <meta charset="utf8" />
+    <meta name="author" content="Jakub Duriasz">
+    <script></script>
+  </head>
+  <body>
+    <h2>Kalkulator</h2>
+    <form>
+      a: <input type="number" id="a" /> b: <input type="number" id="b" />
+      <button type="button" onclick="dodaj()">+</button>
+      <button type="button" onclick="odejmij()">-</button>
+      <button type="button" onclick="pomnóż()">*</button>
+      <button type="button" onclick="podziel()">/</button> =
+      <input type="text" id="result" disabled="disabled" />
+    </form>
+
+    <script>
+      function dodaj() {
+        let a = document.querySelector("#a").value;
+        let b = document.querySelector("#b").value;
+        let wynik = a + b;
+
+        document.querySelector("#result").value = wynik;
+      }
+
+      function odejmij() {
+        let a = document.querySelector("#a").value;
+        let b = document.querySelector("#b").value;
+        let wynik = a - b;
+
+        document.querySelector("#result").value = wynik;
+      }
+
+      function pomnóż() {
+        let a = document.querySelector("#a").value;
+        let b = document.querySelector("#b").value;
+        let wynik = a * b;
+
+        document.querySelector("#result").value = wynik;
+      }
+
+      function podziel() {
+        let a = document.querySelector("#a").value;
+        let b = document.querySelector("#b").value;
+        let wynik = a / b;
+
+        document.querySelector("#result").value = wynik;
+      }
+    </script>
+  </body>
+</html>

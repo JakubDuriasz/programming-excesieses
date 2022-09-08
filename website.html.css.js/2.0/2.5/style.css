@@ -1,0 +1,22 @@
+body {
+    margin: 10px auto;
+    width: 800px;
+    }
+
+a {
+    display: block;
+        }
+    
+nav{
+    width: 25%;
+    float: left
+    }
+    
+main {
+    width: 75%;
+    float: left
+    }
+    
+p, nav  a {
+    margin: 10px;
+    }

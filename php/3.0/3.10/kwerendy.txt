@@ -1,0 +1,9 @@
+SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM `osoby` LIMIT 30; 
+
+SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa 
+FROM osoby , hobby 
+WHERE hobby.id = osoby.Hobby_id AND hobby.id = 10;
+
+SELECT Avg(rok_urodzenia), MIN(rok_urodzenia), MAX(rok_urodzenia) FROM osoby;
+
+UPDATE osoby SET opis="sporty ekstremalne" WHERE osoby.Hobby_id=4;

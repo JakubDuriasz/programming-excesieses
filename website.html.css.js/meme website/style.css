@@ -1,0 +1,19 @@
+#photo {
+    background-image: url(https://cdn.shopify.com/s/files/1/0360/5713/products/Pepe_the_Frog_-_Plush_doll_1024x1024.JPG?v=1476137684);
+    background-size: cover;
+}
+
+#zbysiu {
+    background-image: url(https://i.ytimg.com/vi/HAWDaTmJOW4/mqdefault.jpg);
+    background-size: cover;
+}
+
+#korwin {
+    background-image: url(https://i.ytimg.com/vi/Rp8JiEXNt7U/maxresdefault.jpg);
+    background-size: cover;
+}
+
+body{
+    background-color:grey;
+}   
+

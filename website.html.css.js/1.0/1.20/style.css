@@ -1,0 +1,17 @@
+			p {
+				font-family: "Arial";
+				font-size: medium;
+				background-color: green;
+				border: 10px dashed red;
+			}
+
+			div{
+				color: white;
+				font-family: "Verdana";
+				font-size: 18px;
+				background-color: grey;
+				border: double black;
+				padding-bottom: 20px;
+				cursor: wait;
+				margin: 10px;
+			}

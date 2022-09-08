@@ -1,0 +1,14 @@
+a) INSERT INTO `lokalizacja`(`id`, `Nazwa`, `Adres`) VALUES ('3', 'KAT1' , 'Katowice,Korfantego 105');
+
+b) SELECT id FROM pogoda WHERE temperatura>20;
+
+c) SELECT lokalizacja.id, prognoza.dataProg 
+FROM lokalizacja, prognoza, pogoda 
+WHERE lokalizacja.id = prognoza.Lokalizacja_id 
+AND pogoda.id = prognoza.Pogoda_id AND pogoda.Wilgotnosc>50;
+
+d) SELECT lokalizacja.nazwa, pogoda.id
+FROM prognoza, lokalizacja, pogoda
+WHERE lokalizacja.id = prognoza.Lokalizacja_id
+and pogoda.id = prognoza.Pogoda_id
+and prognoza.dataProg = "2015-07-02";

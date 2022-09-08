@@ -1,0 +1,24 @@
+#zegar {
+    text-align: right;
+}
+
+#pudelko {
+    margin: auto;
+    width: 100%;
+    height: auto;
+
+}
+
+#menulewe {
+    width: 100%;
+    height: 80%;
+    float: left;
+    background-color: rgb(60, 65, 68);
+    padding: 5px;
+}
+
+#stopka {
+    background-color: lightgray;
+    clear: both;
+    padding: 5px;
+}

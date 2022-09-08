@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Zadanie nr 1</title>
+  <meta autor name='Jakub Duriasz'>
+</head>
+
+<body>
+  <h1>Witam na stronie z zadaniami z JS</h1>
+  <h2>Zadanie nr 1</h2>
+
+  <h3>Suma liczb a + b =<div id='wynik'></div>
+  </h3>
+
+  <footer>
+    <h4>Jakub Duriasz gr. 1</h4>
+  </footer>
+
+  <script type="text/javascript">
+    const a = parseInt(prompt("Podaj liczbę a"))
+    const b = parseInt(prompt("Podaj liczbę b"))
+    alert(`iloczyn wynosi = ${a * b}`)
+    const wynik = document.getElementById('wynik')
+    wynik.textContent = a + b
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+SELECT id, nazwa, opis, zdjecie FROM produkty WHERE id =18 or id=22 or id= 23 or id= 25;
+
+SELECT id, nazwa, opis, zdjecie FROM produkty WHERE Rodzaje_id=12;
+
+SELECT produkty.nazwa, rodzaje.nazwa FROM produkty, rodzaje WHERE produkty.Rodzaje_id = rodzaje.id AND produkty.opis LIKE "%Leia%";
+
+DELETE FROM produkty WHERE produkty.id = 15;

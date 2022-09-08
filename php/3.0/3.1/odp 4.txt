@@ -1,0 +1,1 @@
+SELECT tytul,imie,nazwisko,nazwa From ksiazki,autorzy,kategorie where autor=aid and kategoria=kid

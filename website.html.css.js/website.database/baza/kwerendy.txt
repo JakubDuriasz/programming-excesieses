@@ -1,0 +1,4 @@
+1)SELECT * FROM `ksiazki` WHERE `Wydawnictwo` = "Ossolineum"
+2)SELECT ksiazki.Tytul, autorzy.Imie, autorzy.Nazwisko FROM ksiazki, autorzy WHERE ksiazki.AutorID = autorzy.IDAutor
+3)SELECT egzemplarze.IDEgzemplarz, ksiazki.Tytul FROM egzemplarze, ksiazki WHERE egzemplarze.DoWypozyczenia = 0 AND egzemplarze.KsiazkaID = ksiazki.IDKsiazki
+4)INSERT INTO `autorzy`(`IDAutor`, `Imie`, `Nazwisko`) VALUES (NULL,"Adam","Asnyk")

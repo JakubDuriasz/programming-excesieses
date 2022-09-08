@@ -1,0 +1,9 @@
+h1,
+h2,
+h3,
+h4,
+p {
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 30px;
+}

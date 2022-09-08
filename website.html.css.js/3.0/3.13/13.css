@@ -1,0 +1,8 @@
+div#id1 {
+    width: 400px;
+    height: 600px;
+    border-style: dashed;
+    border-width: 4px;
+    border-color: blue;
+    font-family: "Courier New";
+}

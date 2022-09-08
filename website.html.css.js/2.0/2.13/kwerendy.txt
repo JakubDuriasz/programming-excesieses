@@ -1,0 +1,17 @@
+zapyt.1
+
+SELECT haslo FROM uzytkownicy WHERE login="Justyna";
+
+zapyt. 2
+
+SELECT COUNT(*) FROM dane;
+
+zapyt.3
+
+SELECT uzytkownicy.login, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.hobby 
+FROM uzytkownicy, dane
+WHERE uzytkownicy.id=dane.id AND uzytkownicy.login="Justyna";
+
+zapyt. 4
+
+ALTER TABLE `dane` ADD `stanowisko` TEXT NOT NULL AFTER `zdjecie`;

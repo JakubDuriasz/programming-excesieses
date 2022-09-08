@@ -1,0 +1,45 @@
+body
+{
+	margin: auto;
+}
+#baner
+{
+	background-color: #4A7684;
+	color: white;
+	text-align: center;
+	font-family: Arial;	
+	padding: 20px;
+}
+
+#panel_lewy
+{
+	text-align: center;
+	width: 65%;
+	height: 500px;
+	float: left;
+}
+
+#panel_prawy
+{
+	background-color: #4A7684;
+	color: white;
+	width: 35%;
+	height: 500px;
+	float: left;
+
+}
+
+#stopka
+{
+	background-color: #4A7684;
+	color: white;
+	text-align: center;
+	font-family: Arial;
+	padding: 20px;
+	clear: left;
+}
+
+a
+{
+	color:yellow;
+}

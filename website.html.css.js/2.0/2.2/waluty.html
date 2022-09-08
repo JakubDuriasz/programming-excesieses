@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jakub Duriasz">
+    <title>Przelicznik walut</title>
+  </head>
+
+  <body>
+    <h1>Przelicznik walut<br /></h1>
+    <form name="waluty">
+      <input type="number" name="pln" id="pln" /> zł<br />
+      <input type="button" value="Przelicz" onclick="przelicz()" /><br />
+      <input type="number" name="usd" id="usd" /> usd<br />
+      <input type="number" name="euro" id="euro" /> euro<br />
+    </form>
+    <script>
+      const USD_MULTIPLIER = 0.24;
+      const EURO_MULTIPLIER = 0.21;
+
+      function przelicz() {
+        const wartosc = document.waluty.pln.value;
+        const euro = wartosc * EURO_MULTIPLIER;
+        const usd = wartosc * USD_MULTIPLIER;
+
+        document.waluty.usd.value = usd;
+        document.waluty.euro.value = euro;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#pudelko {
+    margin: auto;
+    width: 90%;
+    height: 800px;
+
+}
+
+#logo {
+    height: 10%;
+    background-color: gray;
+}
+
+#menulewe {
+    width: 20%;
+    height: 80%;
+    float: left;
+    background-color: darkgray;
+}
+
+#tresc {
+    width: 60%;
+    height: 80%;
+    float: left; 
+    background-color: silver;
+}
+
+#menuprawe {
+    width: 20%;
+    height: 80%;
+    float: right;
+    background-color: darkgray;
+}
+
+#stopka {
+    background-color: gray;
+    clear: both;
+}

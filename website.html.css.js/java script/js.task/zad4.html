@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Zadanie nr 4</title>
+    <link rel="StyleSheet" href="style.css" type="text/css">
+    <meta autor name='Jakub Duriasz'>
+</head>
+
+<body>
+    <h1>Witam na stronie z zadaniami z JS</h1>
+    <h2>Zadanie nr 4</h2>
+    Obwód =<div id='obwod'></div><br>
+    Pole =<div id='pole'></div><br>
+    Wartość promienia =<div id='promien'></div>
+    <footer>
+        <h4>Jakub Duriasz gr. 1</h4>
+    </footer>
+
+    <script type="text/javascript">
+        const r = parseInt(prompt("podaj promień"))
+        const obwod = document.getElementById('obwod')
+        obwod.textContent = r * 6.28
+
+        const pole = document.getElementById('pole')
+        pole.textContent = r ** 2 * 3.14
+
+        const promien = document.getElementById('promien')
+        promien.textContent = r
+
+    </script>
+</body>
+
+</html>

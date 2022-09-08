@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!-- header -->
+<head>
+    <meta charset="UTF-8">
+    <title>Strona www</title>
+    <meta autor="Jakub Duriasz">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<!-- początek body -->
+<body onload="zegarek()">
+    <div id="zegar"></div>
+                                <!-- slajder -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="zd1.jpg" class="d-block w-100" alt="zd1">
+            </div>
+            <div class="carousel-item">
+                <img src="zd2.jpeg" class="d-block w-100" alt="zd2">
+            </div>
+            <div class="carousel-item">
+                <img src="zad3.jpg" class="d-block w-100" alt="zd3">
+            </div>
+            <div class="carousel-item">
+                <img src="zd4.jpg" class="d-block w-100" alt="zd4">
+            </div>
+            <div class="carousel-item">
+                <img src="zd5.jpeg" class="d-block w-100" alt="zd5">
+            </div>
+            <div class="carousel-item">
+                <img src="zd6.jpg" class="d-block w-100" alt="zd6">
+            </div>
+            <div class="carousel-item">
+                <img src="zd7.jpg" class="d-block w-100" alt="zd7">
+            </div>
+            <div class="carousel-item">
+                <img src="zd8.jpg" class="d-block w-100" alt="zd8">
+            </div>
+            <div class="carousel-item">
+                <img src="zd9.jpg" class="d-block w-100" alt="zd9">
+            </div>
+            <div class="carousel-item">
+                <img src="zd10.jpg" class="d-block w-100" alt="zd10">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </div>
+    <!-- koniec slajdera -->
+    
+    <h1>
+        <marquee>Witamy na naszej stronie</marquee>  <!-- baner -->
+    </h1>
+
+    <div id="pudelko"> <!-- menu -->
+
+        <div id="menulewe">
+            <a href="https://www.gov.pl" target="blank"><img id="img1" onmouseover="setNewImage1()"
+                    onmouseout="setOldImage1()" src="java.png"></a><br>
+            <a href="https://www.cke.edu.pl" target="blank"><img id="img2" onmouseover="setNewImage2()"
+                    onmouseout="setOldImage2()" src="pc.jpg"></a><br>
+            <a href="https://www.zseis.zgora.pl" target="blank"><img id="img3" onmouseover="setNewImage3()"
+                    onmouseout="setOldImage3()" src="cszarp.png"></a><br>
+        </div><!-- stopka -->
+        <div id="stopka"> Jakub Duriasz 2TD gr. 1 </div>
+    </div>
+
+    <!-- skrypt java -->
+    <script type="text/javascript">
+        function zegarek() {
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
+
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+
+            var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+
+            var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+            document.getElementById("zegar").innerHTML = pokazDate;
+
+            setTimeout(zegarek, 1000);
+        }
+
+        function setNewImage1() {
+            document.getElementById('img1').src = "java1.png";
+        }
+
+        function setOldImage1() {
+            document.getElementById('img1').src = "java.png";
+        }
+
+        function setNewImage2() {
+            document.getElementById('img2').src = "pc1.jpg";
+        }
+
+        function setOldImage2() {
+            document.getElementById('img2').src = "pc.jpg";
+        }
+
+        function setNewImage3() {
+            document.getElementById('img3').src = "cszarp1.png";
+        }
+
+        function setOldImage3() {
+            document.getElementById('img3').src = "cszarp.png";
+        }
+    </script>
+</body>
+
+</html>

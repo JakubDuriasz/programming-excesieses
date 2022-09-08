@@ -1,0 +1,27 @@
+.text{
+    font-family: arial;
+}
+	  
+    .rzeczownik{
+        color: darkviolet;
+        text-decoration: underline;
+        font-family: arial;
+        font-style: italic;
+}
+	   
+    .przymiotnik{
+        color: blue;
+        font-family: arial;
+        text-decoration: underline overline;
+}
+	   
+    .czasownik{
+        color: crimson;
+        text-decoration:inherit;
+        font-family: arial;
+}
+
+body {
+    background-color:aquamarine;
+    text-align: center;
+}

@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-size: 25px;
+}
+header {
+    height: 200px;
+    line-height: 200px;
+    background-color: rgb(65, 161, 65);
+    width: 100%;
+    font-size: 50px;
+    color: rgb(206, 51, 51);
+}
+form {
+    padding-top: 100px;
+    background-image: url(miko.jpg);
+    background-size: cover;
+    color: white;
+    font-weight: 1000;
+    padding-bottom: 60px;
+}
+#text {
+    font-size: 18px;
+    width: 500px;
+    border-radius: 25px;
+    border: black 2px solid;
+    height: 30px;
+}
+#text:focus {
+    outline: none;
+}
+footer {
+    padding: 100px;
+    background-color: rgb(95, 184, 73);
+}
+#przycisk {
+    width: 80px;
+    border-radius: 25px;
+    height: 30px;
+    border: none;
+}

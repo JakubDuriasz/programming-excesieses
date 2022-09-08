@@ -1,0 +1,55 @@
+body{
+	margin:0;
+}
+
+
+#cont{
+height: 100%;
+width: 100%;
+}
+
+#baner{
+background-color: #3B85AA;
+color: white;
+padding: 10px;
+text-align: center;
+font-family: Arial;
+}
+
+#pl{
+
+width: 80%;
+height: 450px;
+text-align: center;
+float: left;
+}
+
+#pp{
+background-color: #4E9BB5;
+width: 20%;
+height: 450px;
+color: white;
+float: left;
+}
+
+#footer { 
+    background-color: #3B85AA;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    
+}
+
+a:visited {
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+li {
+	
+}
+

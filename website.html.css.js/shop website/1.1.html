@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#onas">O Nas</a>
+  <a href="#gra">Nasza Gra</a>
+</div>
+
+<div id="onas" style="padding-left:16px">
+<h1>Jak to jest być skrybą? Dobrze?</h1>
+<p>
+Moim zdaniem to nie ma tak, że dobrze albo że nie dobrze. Gdybym miał powiedzieć, co cenię w życiu najbardziej, powiedziałbym, że ludzi. Ekhm… Ludzi, którzy podali mi pomocną dłoń, kiedy sobie nie radziłem, kiedy byłem sam. I co ciekawe, to właśnie przypadkowe spotkania wpływają na nasze życie. Chodzi o to, że kiedy wyznaje się pewne wartości, nawet pozornie uniwersalne, bywa, że nie znajduje się zrozumienia, które by tak rzec, które pomaga się nam rozwijać. Ja miałem szczęście, by tak rzec, ponieważ je znalazłem. I dziękuję życiu. Dziękuję mu, życie to śpiew, życie to taniec, życie to miłość. Wielu ludzi pyta mnie o to samo, ale jak ty to robisz?, skąd czerpiesz tę radość? A ja odpowiadam, że to proste, to umiłowanie życia, to właśnie ono sprawia, że dzisiaj na przykład buduję maszyny, a jutro… kto wie, dlaczego by nie, oddam się pracy społecznej i będę ot, choćby sadzić… znaczy… marchew.
+
+
+</p>
+
+</div>
+<div id="gra" style="padding-left:16px">
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Surowce')">Surowce</button>
+    <button class="tablinks" onclick="openCity(event, 'Budynki')">Budynki</button>
+    <button class="tablinks" onclick="openCity(event, 'Jednostki')">Jednostki</button>
+    <button class="tablinks" onclick="openCity(event, 'Premium')">Premium</button>
+  </div>
+</div>
+
+<div id="Surowce" class="tabcontent">
+  <h2>Surowce</h2>
+  <table>
+  <tr>
+    <td>Drewno</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Glina</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Kamień</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Węgiel</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Marmur</td>
+    <td>30</td>
+  </tr>
+</table>
+</div>
+
+
+<div id="Budynki" class="tabcontent">
+  <h2>Budynki</h2>
+  <table>
+  <tr>
+    <td>Ratusz</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Kuźnia</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Tartak</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Warsztat</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Kopalnia</td>
+    <td>10</td>
+  </tr>
+</table>
+</div>
+
+<div id="Jednostki" class="tabcontent">
+  <h2>Jednostki</h2>
+  <table>
+  <tr>
+    <td>Pikinier</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Rycerz</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Łucznik</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Kusznik</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Kawalerzysta</td>
+    <td>30</td>
+  </tr>
+</table>
+</div>
+
+<div id="Premium" class="tabcontent">
+  <h2>Premium</h2>
+  <table>
+  <tr>
+    <td><img src="https://png.pngtree.com/element_our/png/20181126/wood-vector-icon-png_247907.jpg" width="50" height="50">Drewno</td>
+    <td><a href="https://www.przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://thumbs.dreamstime.com/z/ceg%C5%82y-ikona-ceg%C5%82a-logo-pojedynczy-bia%C5%82e-t%C5%82o-r%C3%B3wnie%C5%BC-zwr%C3%B3ci%C4%87-corel-ilustracji-wektora-101033786.jpg" width="50" height="50">Glina</td>
+    <td><a href="https://www.przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://thumbs.dreamstime.com/z/piedra-preciosa-p%C3%BArpura-cristal-de-la-historieta-gemas-y-cristal-mineral-ilustraci%C3%B3n-del-vector-colecci%C3%B3n-de-iconos-de-la-85716618.jpg" width="50" height="50">Kamień</td>
+    <td><a href="https://www.przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://comps.canstockphoto.pl/styl-prosty-w%C3%B3z-w%C4%99giel-ikona-ko%C5%82a-wektory-clipart_csp41496951.jpg" width="50" height="50">Węgiel</td>
+    <td><a href="https://www.przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.xl.thumbs.canstockphoto.pl/kolumna-ikona-rzymski-styl-rysunek-klipart-wektorowy_csp40410213.jpg" width="50" height="50">Marmur</td>
+    <td><a href="https://www.przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://thumbs.dreamstime.com/z/smithy-ikona-ku%C5%BAnia-i-stithy-blacksmith-symbol-mieszkanie-63309843.jpg" width="50" height="50">Kuźnia</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.myloview.pl/fototapety/ikona-osi-w-stylu-konspektu-samodzielnie-na-bialym-tle-tartak-i-drewna-symbolu-ilustracji-wektorowych-czas-400-93316125.jpg" width="50" height="50">Tartak</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://st2.depositphotos.com/7358038/10214/v/950/depositphotos_102140494-stock-illustration-shop-or-store-icon.jpg" width="50" height="50">
+Warsztat</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://comps.canstockphoto.pl/ikona-prosty-styl-kopalnia-wektory-eps_csp53256943.jpg" width="50" height="50">
+Kopalnia</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="data:image/jpeg;base64,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" width="50" height="50">Pikinier</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://thumbs.dreamstime.com/z/%C5%9Bredniowieczna-rycerz-ikona-109143484.jpg" width="50" height="50">Rycerz</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.myloview.pl/tapety/archer-ikona-400-75266803.jpg" width="50" height="50">Łucznik</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://st3.depositphotos.com/1020091/13155/v/450/depositphotos_131558676-stock-illustration-crossbow-icon-illustration.jpg" width="50" height="50">Kusznik</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://comps.canstockphoto.pl/wektor-kawalerzysta-ilustracja_csp12266320.jpg" width="50" height="50">Kawalerzysta</td>
+    <td><a href="https://przelewy24.pl" target="_blank">DOKUP</a></td>
+  </tr>
+</table>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>

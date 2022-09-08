@@ -1,0 +1,4 @@
+ul li:nth-child(even) {
+    color: green;
+    font-style: italic;
+}

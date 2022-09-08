@@ -1,0 +1,7 @@
+h1[title^="ulala"] {
+    letter-spacing: 5px;
+    text-align: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: dotted;
+}

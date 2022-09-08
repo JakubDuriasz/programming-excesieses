@@ -1,0 +1,6 @@
+ol li:nth-child(odd) {
+    color: yellow;
+    font-style: italic;
+    font-weight: 900;
+    text-decoration: underline;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Zadanie nr 11</title>
+    <meta autor name='Jakub Duriasz'>
+
+    <script language="javascript">
+        function licz() {
+            a = parseInt(ff.a.value);
+            b = parseInt(ff.b.value);
+            c = parseInt(ff.c.value);
+
+            if ((a >= b) && (a >= c)) {
+                document.write(a + " ");
+                if (b > c) {
+                    document.write(b + " ");
+                    document.write(c);
+                }
+                else {
+                    document.write(c + " ");
+                    document.write(b);
+                }
+            }
+            else if ((b >= a) && (b >= c)) {
+                document.write(b + " ");
+                if (a > c) {
+                    document.write(a + " ");
+                    document.write(c);
+                }
+                else {
+                    document.write(c + " ");
+                    document.write(a);
+                }
+            }
+            else {
+                document.write(c + " ");
+                if (b > a) {
+                    document.write(b + " ");
+                    document.write(a);
+                }
+                else {
+                    document.write(c + " ");
+                    document.write(a);
+                }
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Witam na stronie z zadaniami z JS</h1>
+    <h2>Zadanie nr 11</h2>
+
+    <form id="ff">
+        <input type="text" name="a" placeholder="a" /><br />
+        <input type="text" name="b" placeholder="b" /><br />
+        <input type="text" name="c" placeholder="c" /><br /><input type="button" value="Sprawdz" onClick="licz();" />
+    </form>
+
+    <footer>
+        <h4>Jakub Duriasz gr. 11</h4>
+    </footer>
+</body>
+
+</html>

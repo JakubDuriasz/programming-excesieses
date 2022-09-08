@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <?php 
+    $conn = mysqli_connect("127.0.0.1","root","","portal) or die("BLAD polonczenia");
+    echo"JEST POLONCZENIE";
+    mysqli_close($conn);
+    ?>
+<head>
+    <link rel="stylesheet" type="text/css" href="style5.css">
+    <title>Portal społecznościowy</title>
+</head>
+<body>
+    <div class="baner1">
+        <h2>Nasze osiedle</h2>
+    </div>
+    <div class="baner2">
+
+    </div>
+    <div class="bloklewy">
+        <h3>Logowanie</h3>
+        <p>login</p>
+        <input text><br>
+        <p>hasło</p>
+        <input type="password">
+        <p><button>zaloguj</button></p>
+    </div>
+    <div class="blokprawy">
+        <h3>Wizytówka</h3>
+
+        <div class="wizytowka">
+            <img src="o3.jpg">
+
+            <h3>Heniek (29)</h3>  
+
+            hobby: film<br>
+
+            <img src="icon-on.png"><br>
+            <h2>20</h2>
+
+            <button>Wiecej informacji</button>
+        </div>
+
+    </div>
+    <div class="stopka">
+        Stronę wykonał: Jakub Duriasz gr.1
+        </div>
+</body>
+</html>

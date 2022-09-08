@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Zadanie nr 3</title>
+    <meta autor name='Jakub Duriasz'>
+
+    <script type="text/javascript">
+        function rozwiazanie() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var delta;
+            var x1
+            var x2
+            var x0
+
+            if (a == 0) {
+                alert("to nie jest równanie kwadratowe - a=0")
+            }
+            else {
+                if (a == "" || b == "" || c == "") {
+                    alert("pozostawiłes puste pole")
+                }
+                else {
+
+                    delta = Math.pow(b, 2) - (4 * a * c)
+                    if (delta < 0) {
+                        alert("delta ujemna -> brak rozwiazan")
+                    }
+
+                    else if (delta == 0) {
+                        x0 = -b / (2 * a)
+                        alert("delta rowna zero -> jedno rozwiazanie: " + x0)
+                    }
+                    else if (delta > 0) {
+                        x1 = (-b - Math.sqrt(delta)) / (2 * a)
+                        x2 = (-b + Math.sqrt(delta)) / (2 * a)
+                        alert("Delta dodatnia -> dwa rozwiazania: x1 = " + x1 + " x2 = " + x2);
+                    }
+                }
+            }
+        }
+        function wyczysc() {
+            document.getElementById("a").value = 0;
+            document.getElementById("b").value = 0;
+            document.getElementById("c").value = 0;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Witam na stronie z zadaniami z JS</h1>
+    <h2>Zadanie nr 3</h2>
+
+    <input type="number" value="0" size="3" id="a" />
+    a^2 +
+    <input type="number" value="0" size="3" id="b" />
+    x -
+    <input type="number" value="0" size="3" id="c" />
+    = 0
+    <br>
+    <input type="submit" value="rozwiaz" onclick="rozwiazanie()" />
+    <input type="submit" value="wyczysc" onclick="wyczysc()" />
+
+    <footer>
+        <h4>Jakub Duriasz gr. 1</h4>
+    </footer>
+</body>
+
+</html>

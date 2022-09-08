@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Zadanie nr 12</title>
+    <meta autor name='Jakub Duriasz'>
+</head>
+
+<body>
+    <h1>Witam na stronie z zadaniami z JS</h1>
+    <h2>Zadanie nr 12</h2>
+
+    <h3>Użytkownik;<br>
+        wzrost:<div id='wynik'></div>
+    </h3 
+    <footer>
+        <h4>Jakub Duriasz gr. 1</h4>
+    </footer>
+    <script type="text/javascript">
+        const a = parseInt(prompt("Podaj swój wzrost"))
+        const wynik = document.getElementById('wynik')
+        wynik.textContent = a
+
+        if (a < 150) {
+            alert('NISKI<150cm')
+        }
+        else if (a > 180) {
+            alert('WYSOKI')
+        }
+        else if (a < 180) {
+            alert("ŚREDNI<180cm")
+        }
+    </script>
+</body>
+
+</html>

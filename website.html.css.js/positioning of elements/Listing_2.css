@@ -1,0 +1,12 @@
+body{
+	margin: 0;
+	padding: 0;
+    background-image:url(KRATKA.JPG);
+}
+
+#obrazek.css{
+	border:solid black;
+	position: absolute;
+	left: 80px;
+	top: 40px;
+}

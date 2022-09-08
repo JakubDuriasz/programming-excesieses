@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="bmw.jpg" usemap="#auto" width="1000" height="666">
+    <div id="nazwa"> </div>
+
+    <map name="auto">
+      <area shape="circle" coords="335, 504, 70" onclick="kolo_p()">
+      <area shape="circle" coords="70, 470, 50" onclick="kolo_t()">
+      <area shape="circle" coords="433, 249, 90" onclick="szyba_p()">
+      <area shape="circle" coords="215, 290, 30" onclick="lusterko_p()")>
+      <area shape="circle" coords="650, 285, 30" onclick="lusterko_l()")>
+      <area shape="circle" coords="578, 321, 70" onclick="maska()")>
+      <area shape="circle" coords="560, 410, 70" onclick="swiatlo_p()")>
+      <area shape="circle" coords="865, 395, 50" onclick="swiatlo_l()")>
+      <area shape="circle" coords="762, 482, 50" onclick="tablica_r()")>
+      <area shape="circle" coords="740, 403, 60" onclick="grill()")>
+    </map>
+    
+    <script type="text/javascript">
+    function kolo_p() {
+      document.getElementById("nazwa").style.fontFamily = "Impact";
+      document.getElementById("nazwa").style.color = "#00cc99";
+      document.getElementById("nazwa").innerHTML = "Koło przednie";
+
+    }
+    function kolo_t() {
+      document.getElementById("nazwa").style.fontFamily = "Consolas";
+      document.getElementById("nazwa").style.color = "#ff99ff";
+      document.getElementById("nazwa").innerHTML = "Koło tylnie";
+    }
+    function szyba_p() {
+      document.getElementById("nazwa").style.fontFamily = "Georgia";
+      document.getElementById("nazwa").style.color = "#666699";
+      document.getElementById("nazwa").innerHTML = "Szyba przednia";
+    }
+    function lusterko_p() {
+      document.getElementById("nazwa").style.fontFamily = "Modern";
+      document.getElementById("nazwa").style.color = "#0066cc";
+      document.getElementById("nazwa").innerHTML = "Lusterko prawe";
+    }
+    function lusterko_l() {
+      document.getElementById("nazwa").style.fontFamily = "Helvetica";
+      document.getElementById("nazwa").style.color = "#00ff00";
+      document.getElementById("nazwa").innerHTML = "Lusterko lewe";
+    }
+    function maska() {
+      document.getElementById("nazwa").style.fontFamily = "Blackletter";
+      document.getElementById("nazwa").style.color = "#ffcc99";
+      document.getElementById("nazwa").innerHTML = "Maska";
+    }
+    function swiatlo_p() {
+      document.getElementById("nazwa").style.fontFamily = "Arial";
+      document.getElementById("nazwa").style.color = "#99ff66";
+      document.getElementById("nazwa").innerHTML = "Światło prawe";
+    }
+    function swiatlo_l() {
+      document.getElementById("nazwa").style.fontFamily = "Antiqua";
+      document.getElementById("nazwa").style.color = "#ff6699";
+      document.getElementById("nazwa").innerHTML = "Światło lewe";
+    }
+    function tablica_r() {
+      document.getElementById("nazwa").style.fontFamily = "Palatino";
+      document.getElementById("nazwa").style.color = "#ffcc00";
+      document.getElementById("nazwa").innerHTML = "Tablica rejestracyjna";
+    }
+    function grill() {
+      document.getElementById("nazwa").style.fontFamily = "Times";
+      document.getElementById("nazwa").style.color = "blue";
+      document.getElementById("nazwa").innerHTML = "Grill";
+    }
+    </script>
+</body>
+
+</html>

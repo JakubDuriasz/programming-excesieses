@@ -1,0 +1,1 @@
+UPDATE `autorzy` SET `imie` = 'Andrzej', `nazwisko` = 'Nowak' WHERE `autorzy`.`aid` = 1 
